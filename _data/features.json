@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Tư vấn miễn phí",
+    "description": "Giúp lựa chọn gói dịch vụ phù hợp nhất với bản thảo của bạn",
+    "image": {
+      "url": "images/features/noun_branding_1885335.svg",
+      "width": 80,
+      "height": 80
+    }
+  },
+  {
+    "title": "Dịch vụ đa dạng",
+    "description": "Hoàn thiện toàn bộ bản thảo, định dạng theo mẫu, nâng cao chất lượng minh họa",
+    "image": {
+      "url": "images/features/noun_3d modeling_1885342.svg",
+      "width": 80,
+      "height": 80
+    }
+  },
+  {
+    "title": "Chứng nhận hiệu đính",
+    "description": "Cung cấp chứng nhận bản thảo đã được hiệu đính ngôn ngữ tiếng Anh",
+    "image": {
+      "url": "images/features/noun_The Process_1885341.svg",
+      "width": 80,
+      "height": 80
+    }
+  }
+]
