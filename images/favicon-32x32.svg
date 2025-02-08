@@ -24,12 +24,12 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="7.375"
      inkscape:cx="15.932203"
-     inkscape:cy="15.932203"
-     inkscape:window-width="1512"
-     inkscape:window-height="916"
+     inkscape:cy="15.864407"
+     inkscape:window-width="1312"
+     inkscape:window-height="411"
      inkscape:window-x="0"
      inkscape:window-y="38"
-     inkscape:window-maximized="1"
+     inkscape:window-maximized="0"
      inkscape:current-layer="svg1" />
   <title
      id="title1">Group</title>
@@ -51,16 +51,32 @@
          rx="3" />
     </g>
   </g>
-  <text
-     xml:space="preserve"
-     style="font-weight:bold;font-size:21.0057px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke-width:0.716101"
-     x="12.970032"
-     y="19.964573"
-     id="text1"
-     transform="scale(0.78696723,1.2707009)"><tspan
-       sodipodi:role="line"
-       id="tspan1"
+  <g
+     id="g2"
+     transform="translate(2.9800303,-0.53250201)">
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:21.0057px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke-width:0.716101"
        x="12.970032"
        y="19.964573"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Serif;-inkscape-font-specification:'Serif Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.716101">X</tspan></text>
+       id="text1"
+       transform="scale(0.78696723,1.2707009)"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         x="12.970032"
+         y="19.964573"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Serif;-inkscape-font-specification:'Serif Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.716101">X</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:21.0057px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke-width:0.716101"
+       x="4.2826157"
+       y="17.80554"
+       id="text2"
+       transform="scale(0.78696725,1.2707009)"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         x="4.2826157"
+         y="17.80554"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Serif;-inkscape-font-specification:'Serif Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.716101">e</tspan></text>
+  </g>
 </svg>

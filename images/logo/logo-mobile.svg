@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showguides="false"
-     inkscape:zoom="7.9756152"
-     inkscape:cx="23.383776"
-     inkscape:cy="21.001515"
+     inkscape:zoom="1.3135482"
+     inkscape:cx="24.742146"
+     inkscape:cy="133.60759"
      inkscape:window-width="1512"
      inkscape:window-height="916"
      inkscape:window-x="0"
@@ -42,18 +42,6 @@
      fill-rule="evenodd">
     <g
        id="logo-mobile">
-      <text
-         xml:space="preserve"
-         style="font-weight:bold;font-size:36.9311px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';word-spacing:0px;fill:#e5261f;fill-opacity:1;stroke-width:1.25901"
-         x="12.643312"
-         y="33.826412"
-         id="text1"
-         transform="scale(0.79427097,1.2590162)"><tspan
-           sodipodi:role="line"
-           id="tspan1"
-           x="12.643312"
-           y="33.826412"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Serif;-inkscape-font-specification:'Serif Bold';fill:#e5261f;fill-opacity:1;stroke-width:1.25901">X</tspan></text>
       <rect
          id="Rectangle-6"
          stroke="#E5261F"
@@ -63,10 +51,34 @@
          y="2"
          width="50"
          height="50" />
-      <path
-         id="."
-         fill="#E5261F"
-         d="M34.402,41.895 C33.9259976,41.3769974 33.688,40.7400038 33.688,39.984 C33.688,39.2279962 33.9329975,38.5840027 34.423,38.052 C34.9130025,37.5199973 35.4939966,37.254 36.166,37.254 C36.8660035,37.254 37.4469977,37.5199973 37.909,38.052 C38.3710023,38.5840027 38.602,39.2279962 38.602,39.984 C38.602,40.7400038 38.3570024,41.3769974 37.867,41.895 C37.3769975,42.4130026 36.7960034,42.672 36.124,42.672 C35.4519966,42.672 34.8780024,42.4130026 34.402,41.895 Z" />
+      <g
+         id="g5"
+         transform="translate(5.6002539)">
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:36.9311px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';word-spacing:0px;fill:#e5261f;fill-opacity:1;stroke-width:1.25901"
+           x="20.658209"
+           y="33.671528"
+           id="text1"
+           transform="scale(0.79427096,1.2590162)"><tspan
+             sodipodi:role="line"
+             id="tspan1"
+             x="20.658209"
+             y="33.671528"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Serif;-inkscape-font-specification:'Serif Bold';fill:#e5261f;fill-opacity:1;stroke-width:1.25901">X</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:36.9311px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';word-spacing:0px;fill:#2f2f41;fill-opacity:1;stroke-width:1.25901"
+           x="5.3844585"
+           y="29.875633"
+           id="text5"
+           transform="scale(0.79427096,1.2590162)"><tspan
+             sodipodi:role="line"
+             id="tspan5"
+             x="5.3844585"
+             y="29.875633"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Serif;-inkscape-font-specification:'Serif Bold';fill:#2f2f41;fill-opacity:1;stroke-width:1.25901">e</tspan></text>
+      </g>
     </g>
   </g>
 </svg>
