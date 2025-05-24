@@ -16,7 +16,7 @@
       <br>
       <a href="https://editx.vn" target="_blank">Editing Services</a>
     </div>
-    <div class="status">✅ Verified Certificate (Sample)</div>
+    <div class="status">✅ Verified Certificate</div>
     <div class="info">
         <div><strong>Certificate Number:</strong> <span class="encoded" data-encoded="RURULTIwMjUtSjAwMDEuTw=="></span></div>
         <div><strong>Title:</strong> <span class="encoded" data-encoded="Um9ib3QtZW5oYW5jZWQgdGhlcmFweTogRGV2ZWxvcG1lbnQgYW5kIHZhbGlkYXRpb24gb2Ygc3VwZXJ2aXNlZCBhdXRvbm9tb3VzIHJvYm90aWMgc3lzdGVtIGZvciBhdXRpc20gc3BlY3RydW0gZGlzb3JkZXJzIHRoZXJhcHk="></span></div>
@@ -28,20 +28,6 @@
     </div>
 </div>
 
-    <script>
-        function decodeBase64(str) {
-            try {
-                return decodeURIComponent(escape(window.atob(str)));
-            } catch (e) {
-                console.error("Decode error:", e);
-                return str;
-            }
-        }
-
-        document.querySelectorAll('.info div span.encoded').forEach(el => {
-            const decoded = decodeBase64(el.dataset.encoded);
-            el.textContent = decoded;
-        });
-    </script>
+    <script src="styles.js"></script>
 </body>
 </html>
