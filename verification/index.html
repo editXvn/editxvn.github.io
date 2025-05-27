@@ -133,6 +133,19 @@
   }
 </script>
 
+<script>
+  // Auto-fill and verify if ?cert=... is in URL
+  window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const certParam = params.get('cert');
+    if (certParam) {
+      const input = document.getElementById('certNumber');
+      input.value = certParam;
+      checkCertificate(); // Call your existing verification function
+    }
+  });
+</script>
+
 </div>
             </div>
         </div>
