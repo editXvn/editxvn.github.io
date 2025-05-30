@@ -128,6 +128,32 @@
   <p>📌 <em>Chúng tôi cam kết tuân thủ các nguyên tắc nghiêm ngặt nhằm đảm bảo tính bảo mật, trung thực và đạo đức nghiên cứu trong quá trình hỗ trợ chỉnh sửa bản thảo khoa học.</em></p>
 </blockquote>
 
+<h3 id="gửi-yêu-cầu"><strong>Gửi yêu cầu</strong></h3>
+
+<form action="https://api.web3forms.com/submit" method="POST">
+  <!-- Web3Forms Access Key -->
+  <input type="hidden" name="access_key" value="a5b2e13c-63be-44fb-863c-1e68f32ad4ec" />
+
+  <!-- User Inputs -->
+  <p><input type="text" id="name" name="name" placeholder="Tên người liên hệ" required="" /></p>
+  <p><input type="email" id="email" name="email" placeholder="Địa chỉ email" required="" /></p>
+  <p><input type="tel" id="phone" name="phone" placeholder="Số điện thoại" /></p>
+  <p>Dịch vụ yêu cầu:</p>
+    <p><input type="checkbox" name="services[]" value="Hoàn thiện bản thảo (cơ bản)" /> Hoàn thiện bản thảo (cơ bản, từ 4.000.000đ)</p>
+    <p><input type="checkbox" name="services[]" value="Hoàn thiện bản thảo (toàn diện)" /> Hoàn thiện bản thảo (toàn diện, 15.000.000đ)</p>
+    <p><input type="checkbox" name="services[]" value="Nâng cao chất lượng minh họa" /> Nâng cao chất lượng minh họa (từ 100.000đ/hình ảnh)</p>
+
+  <textarea id="message" name="message" placeholder="Nhập ghi chú hoặc yêu cầu thêm..." rows="4" style="width:100%;"></textarea><br />
+
+  <!-- Optional Redirect After Submission -->
+  <input type="hidden" name="redirect" value="https://editx.vn/thanks" />
+
+  <!-- Submit -->
+  <button type="submit" class="button" style="border: none;">
+    Gửi yêu cầu
+  </button>
+</form>
+
 <h3 id="bảo-mật-tuyệt-đối"><strong>Bảo mật tuyệt đối</strong></h3>
 <ul>
   <li>Tất cả bản thảo và thông tin cá nhân của tác giả được bảo vệ nghiêm ngặt.</li>
