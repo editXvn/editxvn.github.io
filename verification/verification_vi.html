@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Thông tin được gửi thành công!</title>
+  <title>Xác thực chứng nhận</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/png" href="/images/favicon-32x32.svg">
   <!-- Google Fonts CDN -->
@@ -14,12 +14,12 @@
   <!-- <link rel="preload" href="/assets/fonts/playfair-display.woff2" as="font" type="font/woff2" crossorigin> -->
   <link href="/assets/css/style.css" rel="stylesheet">
   
-  
-  <meta property="og:title" content="Thông tin được gửi thành công!"/>
+  <meta name="description" content="Xác thực chứng nhận" />
+  <meta property="og:title" content="Xác thực chứng nhận"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content=""/>
   
-  
+  <meta property="og:description" content="Xác thực chứng nhận"/>
   <meta name="twitter:card" content="summary"/>
   <meta name="twitter:site" content=""/>
   <meta name="twitter:creator" content=""/>
@@ -43,7 +43,7 @@
       <a href="/team/">Chuyên gia</a>
     </li>
     
-    <li class="">
+    <li class="active">
       <a href="/verification/verification_vi.html">Xác thực chứng nhận</a>
     </li>
     
@@ -79,7 +79,7 @@
       <a href="/team/">Chuyên gia</a>
     </li>
     
-    <li class="">
+    <li class="active">
       <a href="/verification/verification_vi.html">Xác thực chứng nhận</a>
     </li>
     
@@ -102,52 +102,66 @@
     <div class="row justify-content-start">
         <div class="col-12 col-md-8">
             <div class="service service-single">
-                <h1 class="title">Thông tin được gửi thành công!</h1>
-                <div class="content"><style>
-    /* Tương tự tailwind tối giản */
-    body {
-      text-align: center;
-    }
+                <h1 class="title">Xác thực chứng nhận</h1>
+                <div class="content"><p>Vui lòng nhập mã số giấy chứng nhận vào ô dưới đây để xác thực. Mã số giấy chứng nhận bắt đầy bằng <strong>EDT-</strong>.</p>
 
-    svg {
-      width: 80px;
-      height: 80px;
-      color: #48bb78; /* green-500 */
-      margin-bottom: 20px;
-    }
- 
-    a.button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #5a67d8; /* indigo-600 */
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.3s;
-    }
-    a.button:hover {
-      background-color: #434190; /* indigo-700 */
-    }
-    footer {
-      margin-top: 50px;
-      font-size: 0.8rem;
-      color: #a0aec0; /* gray-400 */
-    }
-    footer a {
-      color: #a0aec0;
-      text-decoration: underline;
-    }
-  </style>
+<form id="certForm" onsubmit="return checkCertificate();" style="max-width: 400px; margin-top: 1rem;">
+  <div style="margin-bottom: 1rem;">
+    <label for="certNumber" style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Mã số giấy chứng nhận</label>
+    <div style="display: flex; align-items: center;">
+      <span style="padding: 0.5rem; background: #f0f0f0; border: 1px solid #ccc; border-right: none;">EDT-</span>
+      <input type="text" id="certNumber" name="certNumber" required="" style="flex: 1; padding: 0.5rem; border: 1px solid #ccc; border-left: none;" placeholder="e.g., 123456" />
+    </div>
+  </div>
+  <button type="submit" class="button" style="border: none;">Xác thực</button>
+</form>
 
-<div class="container" role="main">
-    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-      <path d="M26.6666 50L46.6666 66.6667L73.3333 33.3333M50 96.6667C43.8716 96.6667 37.8033 95.4596 32.1414 93.1144C26.4796 90.7692 21.3351 87.3317 17.0017 82.9983C12.6683 78.6649 9.23082 73.5204 6.8856 67.8586C4.54038 62.1967 3.33331 56.1283 3.33331 50C3.33331 43.8716 4.54038 37.8033 6.8856 32.1414C9.23082 26.4796 12.6683 21.3351 17.0017 17.0017C21.3351 12.6683 26.4796 9.23084 32.1414 6.88562C37.8033 4.5404 43.8716 3.33333 50 3.33333C62.3767 3.33333 74.2466 8.24998 82.9983 17.0017C91.75 25.7534 96.6666 37.6232 96.6666 50C96.6666 62.3768 91.75 74.2466 82.9983 82.9983C74.2466 91.75 62.3767 96.6667 50 96.6667Z" stroke="currentColor" stroke-width="3" />
-    </svg>
-	<p>Chúng tôi sẽ liên hệ lại với tác giả trong thời gian sớm nhất.</p>
-   </div>
+<div id="result" style="margin-top: 2rem;">
+  <iframe id="certIframe" style="width: 100%; height: 1000px; border: 1px solid #ccc; display: none;"></iframe>
+  <p id="errorMessage" style="color: red; font-weight: bold;"></p>
+</div>
 
-<p><a href="/">⬅ Quay lại trang chủ</a></p>
+<script>
+  function checkCertificate() {
+    const certNumber = document.getElementById('certNumber').value.trim();
+    const filename = `EDT-${certNumber}.html`;
+    const iframe = document.getElementById('certIframe');
+    const errorMsg = document.getElementById('errorMessage');
+
+    fetch(filename, { method: 'HEAD' })
+      .then(response => {
+        if (response.ok) {
+          iframe.src = filename;
+          iframe.style.display = 'block';
+          errorMsg.textContent = '';
+        } else {
+          iframe.style.display = 'none';
+          errorMsg.textContent = 'Không tìm thấy giấy chứng nhận.';
+        }
+      })
+      .catch(error => {
+        iframe.style.display = 'none';
+        errorMsg.textContent = 'Lỗi xảy ra trong quá trình xác thực.';
+        console.error(error);
+      });
+
+    return false; // Prevent form submission
+  }
+</script>
+
+<script>
+  // Auto-fill and verify if ?cert=... is in URL
+  window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const certParam = params.get('cert');
+    if (certParam) {
+      const input = document.getElementById('certNumber');
+      input.value = certParam;
+      checkCertificate(); // Call your existing verification function
+    }
+  });
+</script>
+
 </div>
             </div>
         </div>
@@ -167,7 +181,7 @@
               <a href="/">Trang chủ</a>
             </li>
             
-            <li class="">
+            <li class="active">
               <a href="/verification/verification_vi.html">Xác thực chứng nhận</a>
             </li>
             
