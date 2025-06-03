@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Certificate Verification</title>
+  <title>editX - Privacy Policy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/png" href="/images/favicon-32x32.svg">
   <!-- Google Fonts CDN -->
@@ -14,12 +14,12 @@
   <!-- <link rel="preload" href="/assets/fonts/playfair-display.woff2" as="font" type="font/woff2" crossorigin> -->
   <link href="/assets/css/style.css" rel="stylesheet">
   
-  <meta name="description" content="Certificate Verification" />
-  <meta property="og:title" content="Certificate Verification"/>
+  <meta name="description" content="editX.vn is with you through every stage of editing and proofreading, helping your manuscript meet international standards and increasing its chances of publication." />
+  <meta property="og:title" content="editX - Privacy Policy"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content=""/>
   
-  <meta property="og:description" content="Certificate Verification"/>
+  <meta property="og:description" content="editX.vn is with you through every stage of editing and proofreading, helping your manuscript meet international standards and increasing its chances of publication."/>
   <meta name="twitter:card" content="summary"/>
   <meta name="twitter:site" content=""/>
   <meta name="twitter:creator" content=""/>
@@ -35,7 +35,7 @@
       <a href="/en/">Home</a>
     </li>
     
-    <li class="active">
+    <li class="">
       <a href="/verification/">Verification</a>
     </li>
     
@@ -63,7 +63,7 @@
       <a href="/en/">Home</a>
     </li>
     
-    <li class="active">
+    <li class="">
       <a href="/verification/">Verification</a>
     </li>
     
@@ -86,66 +86,49 @@
     <div class="row justify-content-start">
         <div class="col-12 col-md-8">
             <div class="service service-single">
-                <h1 class="title">Certificate Verification</h1>
-                <div class="content"><p>Please enter your certificate number below to verify its authenticity. The certificate ID starts with <strong>EDT-</strong>.</p>
+                <h1 class="title">editX - Privacy Policy</h1>
+                <div class="content"><p><strong>Last updated:</strong> May 31, 2025</p>
 
-<form id="certForm" onsubmit="return checkCertificate();" style="max-width: 400px; margin-top: 1rem;">
-  <div style="margin-bottom: 1rem;">
-    <label for="certNumber" style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Certification Number</label>
-    <div style="display: flex; align-items: center;">
-      <span style="padding: 0.5rem; background: #f0f0f0; border: 1px solid #ccc; border-right: none;">EDT-</span>
-      <input type="text" id="certNumber" name="certNumber" required="" style="flex: 1; padding: 0.5rem; border: 1px solid #ccc; border-left: none;" placeholder="e.g., 123456" />
-    </div>
-  </div>
-  <button type="submit" class="button" style="border: none;">Verify</button>
-</form>
+<p>Your privacy is important to us. This privacy policy explains what information we collect, how we use it, and your rights regarding your information.</p>
 
-<div id="result" style="margin-top: 2rem;">
-  <iframe id="certIframe" style="width: 100%; height: 1000px; border: 1px solid #ccc; display: none;"></iframe>
-  <p id="errorMessage" style="color: red; font-weight: bold;"></p>
-</div>
+<h2 id="1-information-we-collect">1. Information We Collect</h2>
 
-<script>
-  function checkCertificate() {
-    const certNumber = document.getElementById('certNumber').value.trim();
-    const filename = `EDT-${certNumber}.html`;
-    const iframe = document.getElementById('certIframe');
-    const errorMsg = document.getElementById('errorMessage');
+<p>This website does not directly collect any personal data from visitors. However, third-party services may collect certain information.</p>
 
-    fetch(filename, { method: 'HEAD' })
-      .then(response => {
-        if (response.ok) {
-          iframe.src = filename;
-          iframe.style.display = 'block';
-          errorMsg.textContent = '';
-        } else {
-          iframe.style.display = 'none';
-          errorMsg.textContent = 'Certificate not found.';
-        }
-      })
-      .catch(error => {
-        iframe.style.display = 'none';
-        errorMsg.textContent = 'An error occurred while loading the certificate.';
-        console.error(error);
-      });
+<h2 id="2-cookies">2. Cookies</h2>
 
-    return false; // Prevent form submission
-  }
-</script>
+<p>This site may use cookies for basic functionality and user experience enhancements. For example:</p>
 
-<script>
-  // Auto-fill and verify if ?cert=... is in URL
-  window.addEventListener('DOMContentLoaded', () => {
-    const params = new URLSearchParams(window.location.search);
-    const certParam = params.get('cert');
-    if (certParam) {
-      const input = document.getElementById('certNumber');
-      input.value = certParam;
-      checkCertificate(); // Call your existing verification function
-    }
-  });
-</script>
+<ul>
+  <li>To remember your cookie consent preference</li>
+  <li>If analytics or embedded content (e.g., videos or maps) are used</li>
+</ul>
 
+<h2 id="3-third-party-services">3. Third-Party Services</h2>
+
+<p>We may use third-party tools that collect data anonymously:</p>
+
+<ul>
+  <li><strong>GitHub Pages</strong> – Hosts this website and may collect anonymous usage data.</li>
+  <li><strong>Google Analytics</strong> (optional) – Tracks website usage statistics (disabled unless you explicitly enable it).</li>
+  <li><strong>Embedded content</strong> (e.g., YouTube, Twitter) – May use cookies or track interactions if you interact with the content.</li>
+</ul>
+
+<h2 id="4-your-rights">4. Your Rights</h2>
+
+<p>You have the right to:</p>
+
+<ul>
+  <li>Know what data is collected</li>
+  <li>Request deletion of your data (if any is stored)</li>
+  <li>Withdraw cookie consent at any time</li>
+</ul>
+
+<h2 id="5-contact">5. Contact</h2>
+
+<p>If you have any questions or concerns about this privacy policy, you can contact us at: <a href="mailto:contact@editx.vn">contact@editx.vn</a></p>
+
+<p>Thank you for visiting!</p>
 </div>
             </div>
         </div>
