@@ -266,18 +266,24 @@
   <button onclick="copyToClipboard('output1')">Sao chép</button>
 </div>
 
-
-  <p><strong>Format 2</strong> (tên đầy đủ → vai trò):</p>
+ <p><strong>Format 2</strong> (vai trò → tên đầy đủ):</p>
   <div class="output-group">
   <div id="output2" class="output-box" contenteditable="true"></div>
   <button onclick="copyToClipboard('output2')">Sao chép</button>
 </div>
 
 
-  <p><strong>Format 3</strong> (tên viết tắt → vai trò):</p>
+  <p><strong>Format 3</strong> (tên đầy đủ → vai trò):</p>
   <div class="output-group">
   <div id="output3" class="output-box" contenteditable="true"></div>
   <button onclick="copyToClipboard('output3')">Sao chép</button>
+</div>
+
+
+  <p><strong>Format 4</strong> (tên viết tắt → vai trò):</p>
+  <div class="output-group">
+  <div id="output4" class="output-box" contenteditable="true"></div>
+  <button onclick="copyToClipboard('output4')">Sao chép</button>
 </div>
 
 </div>
@@ -365,6 +371,7 @@
         document.getElementById("output1").innerHTML = format1(authors, roles);
         document.getElementById("output2").innerHTML = format2(authors, roles);
         document.getElementById("output3").innerHTML = format3(authors, roles);
+        document.getElementById("output4").innerHTML = format4(authors, roles);
 
       });
     });
@@ -376,9 +383,18 @@
     return `<strong>${role}</strong>: ${names}`;
   }).filter(Boolean).join('; ') + '.';
 }
+    function format2(authors, roles) {
+  return roles.map((role, idx) => {
+    const names = authors
+      .filter(a => a.roles[idx])
+      .map(a => a.fullName)   // switched from initials → fullName
+      .join(', ');
+    if (!names) return '';
+    return `<strong>${role}</strong>: ${names}`;
+  }).filter(Boolean).join('; ') + '.';
+}
 
-
-      function format2(authors, roles) {
+      function format3(authors, roles) {
   return authors.map(a => {
     const roleList = roles.filter((_, idx) => a.roles[idx]).join(', ');
     if (!roleList) return '';
@@ -386,7 +402,7 @@
   }).filter(Boolean).join('; ') + '.';
 }
 
-      function format3(authors, roles) {
+      function format4(authors, roles) {
   return authors.map(a => {
     const roleList = roles.filter((_, idx) => a.roles[idx]).join(', ');
     if (!roleList) return '';
