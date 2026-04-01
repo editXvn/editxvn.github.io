@@ -40,6 +40,3 @@ group :other_plugins do
     # gem 'unicode_utils' -- should be already installed by jekyll
     # gem 'webrick' -- should be already installed by jekyll
 end
-
-BUNDLED WITH
-   2.6.9
